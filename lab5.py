@@ -16,14 +16,13 @@ import math
 # Part 3
 def time_add(T1: data.Time,T2: data.Time ):
     total_sec = T1.second + T2.second
-    remaining_seconds = total_sec%60
+    remaining_seconds = total_sec % 60
     remaining_min = total_sec - remaining_seconds
     add_min = remaining_min//60
     total_min = T1.minute + T2.minute + add_min
     total_hour = T1.hour +T2.hour
-
-    return data.Time(total_hour,total_min,remaining_seconds)
-
+    t1 = data.Time(total_hour,total_min,remaining_seconds)
+    return t1
 
 # Part 4
 def is_descending(lst:list[float])->bool:

@@ -80,8 +80,10 @@ class TestCases(unittest.TestCase):
         Tim1 = data.Time(5, 3, 36)
         Tim2 = data.Time(4, 2, 60)
         input = lab5.time_add(Tim1,Tim2)
-        expected = "Time(9,6,36)"
-        self.assertEqual(input,expected)
+        expected = data.Time(9,6,36)
+        print(input)
+        print(expected)
+        self.assertEqual(input, expected)
 
 
 #tests for is_decending
