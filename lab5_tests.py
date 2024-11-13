@@ -81,6 +81,18 @@ class TestCases(unittest.TestCase):
         expected = 1
         self.assertEqual(input,expected)
 
+def groups_of_3(arr: list[int]):
+    my_lists = []
+    Ubound = len(arr)
+    Lbound = 0
+    while Lbound < len(arr)-1:
+        for i in range(Ubound-Lbound)//3:
+            newlist = []
+            newlist.append(arr[i])
+            my_lists.append(newlist)
+        Ubound = Ubound+3
+        Lbound = Lbound+3
+    return(my_lists)
 
 
 
